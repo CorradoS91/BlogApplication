@@ -18,6 +18,16 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
+    public UserDto getUserByEmail(String email) {
+        return userService.getUserByEmail(email);
+    }
+
+    @Override
+    public UserDto getUserByNickname(String nickName) {
+        return userService.getUserByNickname(nickName);
+    }
+
+    @Override
     public UserDto createUser(UserDto userDto) {
         return userService.createUser(userDto);
     }
