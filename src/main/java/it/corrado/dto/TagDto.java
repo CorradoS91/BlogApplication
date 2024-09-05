@@ -10,7 +10,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 public class TagDto {
-    private Integer id;
+    private Long id;
     private String name;
     private Set<Long> postIds;
 }

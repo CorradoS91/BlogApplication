@@ -13,7 +13,7 @@ public class PostControllerImpl implements PostController {
     @Autowired
     private final PostService postService;
     @Override
-    public PostDto getPostById(long id) {
+    public PostDto getPostById(Long id) {
         return postService.getPostById(id);
     }
 
@@ -23,12 +23,12 @@ public class PostControllerImpl implements PostController {
     }
 
     @Override
-    public PostDto updatePost(long id, PostDto postDto) {
+    public PostDto updatePost(Long id, PostDto postDto) {
         return postService.updatePost(postDto,id);
     }
 
     @Override
-    public void deletePost(long id) {
+    public void deletePost(Long id) {
         postService.deletePost(id);
     }
 }

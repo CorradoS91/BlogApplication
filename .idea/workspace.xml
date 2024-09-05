@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunti service e controller per User">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunti service e controller per Post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/TagControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/TagControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/UserControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/UserControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BlogApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BlogApplication [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BlogApplication.executor": "Run",
+    "Maven.BlogApplication [clean,install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
@@ -136,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725530424070</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Aggiunti service e controller per Post">
+      <option name="closed" value="true" />
+      <created>1725532639387</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725532639387</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +171,23 @@
     <MESSAGE value="Aggiunto Tag Service" />
     <MESSAGE value="Aggiunto il controller per Tag Service" />
     <MESSAGE value="Aggiunti service e controller per User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti service e controller per User" />
+    <MESSAGE value="Aggiunti service e controller per Post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti service e controller per Post" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

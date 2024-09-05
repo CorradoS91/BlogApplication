@@ -13,7 +13,7 @@ public class TagControllerImpl implements TagController {
     @Autowired
     private final TagService tagService;
     @Override
-    public TagDto getTagById(long id) {
+    public TagDto getTagById(Long id) {
         return tagService.getTagById(id);
     }
 
@@ -23,12 +23,12 @@ public class TagControllerImpl implements TagController {
     }
 
     @Override
-    public TagDto updateTag(long id, TagDto tagDto) {
+    public TagDto updateTag(Long id, TagDto tagDto) {
         return tagService.updateTag(tagDto,id);
     }
 
     @Override
-    public void deleteTag(long id) {
+    public void deleteTag(Long id) {
         tagService.deleteTag(id);
     }
 }

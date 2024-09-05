@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+
 @Service
 @AllArgsConstructor
 public class PostServiceImpl implements PostService {
@@ -24,13 +26,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public PostDto getPostById(long id) {
+    public PostDto getPostById(Long id) {
         Post post = postRepository.findById(id).orElseThrow();
         return postMapper.postToPostDto(post);
     }
 
     @Override
-    public PostDto updatePost(PostDto postDto, long id) {
+    public PostDto updatePost(PostDto postDto, Long id) {
         Post oldPost = postRepository.findById(id).orElseThrow();
         postMapper.updatePost(postDto, oldPost);
         postRepository.save(oldPost);
@@ -38,7 +40,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public void deletePost(long id) {
+    public void deletePost(Long id) {
         postRepository.findById(id).orElseThrow();
         postRepository.deleteById(id);
     }

@@ -24,13 +24,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto getUserById(long id) {
+    public UserDto getUserById(Long id) {
         User user = userRepository.findById(id).orElseThrow();
         return userMapper.userToUserDto(user);
     }
 
     @Override
-    public UserDto updateUser(UserDto userDto, long id) {
+    public UserDto updateUser(UserDto userDto, Long id) {
         User oldUser = userRepository.findById(id).orElseThrow();
         userMapper.updateUser(userDto,oldUser);
         userRepository.save(oldUser);
@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(long id) {
+    public void deleteUser(Long id) {
         userRepository.findById(id).orElseThrow();
         userRepository.deleteById(id);
     }

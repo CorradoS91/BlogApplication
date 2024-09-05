@@ -12,12 +12,12 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 public class PostDto {
-    private long id;
+    private Long id;
     private String title;
     private String subtitle;
     private String body;
-    private LocalDate created_at;
-    private LocalDate updated_at;
-    private long fk_user_id;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
+    private Long fkUserId;
     private Set<Long> tagIds;
 }

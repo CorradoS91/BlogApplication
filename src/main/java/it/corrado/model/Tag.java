@@ -17,12 +17,12 @@ import java.util.Set;
 @ToString
 @Entity(name="Tag")
 @Table(name="TAG")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "TAG_ID")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="TAG_ID")
-    private long id;
+    private Long id;
     @NotNull
     @NotBlank
     @Column(name="NAME")

@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -17,13 +19,13 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 @Entity(name = "Post")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "POST_ID")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Table(name="POST")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="POST_ID")
-    private long id;
+    private Long id;
     @NotBlank
     @NotNull
     @Column(name ="TITLE")
@@ -36,10 +38,12 @@ public class Post {
     @NotNull
     @Column(name ="BODY")
     private String body;
+    @CreationTimestamp
     @Column(name="CREATED_AT")
-    LocalDate created_at;
+    private LocalDate createdAt;
+    @UpdateTimestamp
     @Column(name="UPDATED_AT")
-    LocalDate updated_at;
+    private LocalDate updatedAt;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="FK_USER_ID")
     private User user;

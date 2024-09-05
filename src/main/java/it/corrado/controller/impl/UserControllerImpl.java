@@ -13,7 +13,7 @@ public class UserControllerImpl implements UserController {
     @Autowired
     private final UserService userService;
     @Override
-    public UserDto getUserById(long id) {
+    public UserDto getUserById(Long id) {
         return userService.getUserById(id);
     }
 
@@ -23,12 +23,12 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public UserDto updateUser(long id, UserDto userDto) {
+    public UserDto updateUser(Long id, UserDto userDto) {
         return userService.updateUser(userDto,id);
     }
 
     @Override
-    public void deleteUser(long id) {
+    public void deleteUser(Long id) {
         userService.deleteUser(id);
     }
 }

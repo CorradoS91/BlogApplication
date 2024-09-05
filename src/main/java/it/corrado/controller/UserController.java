@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.*;
     public interface UserController {
         @GetMapping("/{id}")
         @ResponseStatus(HttpStatus.OK)
-        UserDto getUserById(@PathVariable(name="id")long id);
+        UserDto getUserById(@PathVariable(name="id")Long id);
         @PostMapping
         @ResponseStatus(HttpStatus.CREATED)
         UserDto createUser(@RequestBody UserDto userDto);
         @PutMapping("/{id}")
         @ResponseStatus(HttpStatus.OK)
-        UserDto updateUser(@PathVariable(name="id") long id,@RequestBody UserDto userDto);
+        UserDto updateUser(@PathVariable(name="id") Long id,@RequestBody UserDto userDto);
         @DeleteMapping("/{id}")
         @ResponseStatus(HttpStatus.NO_CONTENT)
-        void deleteUser(@PathVariable(name="id")long id);
+        void deleteUser(@PathVariable(name="id")Long id);
 }

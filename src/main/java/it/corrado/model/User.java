@@ -15,13 +15,13 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @Entity(name = "User")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "USER_ID")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Table(name="USER_BLOG")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name ="USER_ID")
-    private long id;
+    private Long id;
     @NotNull
     @NotBlank
     @Column(name="NAME")

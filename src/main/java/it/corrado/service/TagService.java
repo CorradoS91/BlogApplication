@@ -4,7 +4,7 @@ import it.corrado.dto.TagDto;
 
 public interface TagService {
     TagDto createTag(TagDto tagDto);
-    TagDto getTagById(long id);
-    TagDto updateTag(TagDto tagDto, long id);
-    void deleteTag(long id);
+    TagDto getTagById(Long id);
+    TagDto updateTag(TagDto tagDto, Long id);
+    void deleteTag(Long id);
 }

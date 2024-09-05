@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.*;
 public interface TagController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    TagDto getTagById(@PathVariable(name="id")long id);
+    TagDto getTagById(@PathVariable(name="id")Long id);
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     TagDto createTag(@RequestBody TagDto tagDto);
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    TagDto updateTag(@PathVariable(name="id") long id,@RequestBody TagDto tadDto);
+    TagDto updateTag(@PathVariable(name="id") Long id,@RequestBody TagDto tadDto);
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void deleteTag(@PathVariable(name="id")long id);
+    void deleteTag(@PathVariable(name="id")Long id);
 }

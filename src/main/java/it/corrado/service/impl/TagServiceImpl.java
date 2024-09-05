@@ -24,13 +24,13 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public TagDto getTagById(long id) {
+    public TagDto getTagById(Long id) {
         Tag tag = tagRepository.findById(id).orElseThrow();
         return tagMapper.tagToTagDto(tag);
     }
 
     @Override
-    public TagDto updateTag(TagDto tagDto, long id) {
+    public TagDto updateTag(TagDto tagDto, Long id) {
         Tag oldTag = tagRepository.findById(id).orElseThrow();
         tagMapper.updateTag(tagDto,oldTag);
         tagRepository.save(oldTag);
@@ -38,7 +38,7 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public void deleteTag(long id) {
+    public void deleteTag(Long id) {
         tagRepository.findById(id).orElseThrow();
         tagRepository.deleteById(id);
     }
