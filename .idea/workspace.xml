@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunti i mapper di mapstruct">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunti i repository">
       <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/TagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/TagMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725495581481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Aggiunti i repository">
+      <option name="closed" value="true" />
+      <created>1725496745203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725496745203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -97,6 +102,7 @@
     <MESSAGE value="Aggiunti i model con le relazioni" />
     <MESSAGE value="Aggiunti i dto dei relativi model" />
     <MESSAGE value="Aggiunti i mapper di mapstruct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti i mapper di mapstruct" />
+    <MESSAGE value="Aggiunti i repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti i repository" />
   </component>
 </project>
