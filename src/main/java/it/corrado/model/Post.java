@@ -44,5 +44,5 @@ public class Post {
     @JoinColumn(name="FK_USER_ID")
     private User user;
     @ManyToMany(mappedBy = "POST")
-    private Set<Tag> tagSet = new HashSet<>();
+    private Set<Tag> tagSet;
 }

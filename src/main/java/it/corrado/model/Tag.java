@@ -33,5 +33,5 @@ public class Tag {
             joinColumns = @JoinColumn(name = "POST_ID"),
             inverseJoinColumns = @JoinColumn(name = "TAG_ID")
     )
-    private Set<Post> postSet = new HashSet<>();
+    private Set<Post> post;
 }
