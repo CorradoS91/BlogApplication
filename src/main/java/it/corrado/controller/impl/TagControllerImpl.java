@@ -18,6 +18,11 @@ public class TagControllerImpl implements TagController {
     }
 
     @Override
+    public TagDto getTagByName(String name) {
+        return tagService.getTagByName(name);
+    }
+
+    @Override
     public TagDto createTag(TagDto tagDto) {
         return tagService.createTag(tagDto);
     }

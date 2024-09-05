@@ -10,9 +10,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
-import java.util.Optional;
-
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -62,17 +59,17 @@ public class UserServiceImpl implements UserService {
         exception.setEmailNotFound(email);
         exception.setNicknameNotFound(nickName);
         if(id!=null){
-            String ms ="The following id was not found: %d";
+            String ms ="The following Id was not found: %d";
             exception.setMessage(String.format(ms,id));
             return exception;
         }
         if(email!=null) {
-            String ms ="The following id was not found: %s";
+            String ms ="The following Email was not found: %s";
             exception.setMessage(String.format(ms,email));
             return exception;
         }
         if(nickName!=null) {
-            String ms ="The following id was not found: %s";
+            String ms ="The following Nickname was not found: %s";
             exception.setMessage(String.format(ms,nickName));
             return exception;
         }

@@ -9,6 +9,9 @@ public interface TagController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     TagDto getTagById(@PathVariable(name="id")Long id);
+    @GetMapping("/name/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    TagDto getTagByName(@PathVariable(name="name")String name);
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     TagDto createTag(@RequestBody TagDto tagDto);

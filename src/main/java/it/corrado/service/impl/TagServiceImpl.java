@@ -1,6 +1,7 @@
 package it.corrado.service.impl;
 
 import it.corrado.dto.TagDto;
+import it.corrado.exception.NotFoundException;
 import it.corrado.mapper.TagMapper;
 import it.corrado.model.Tag;
 import it.corrado.repository.TagRepository;
@@ -25,13 +26,19 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public TagDto getTagById(Long id) {
-        Tag tag = tagRepository.findById(id).orElseThrow();
+        Tag tag = tagRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null));
+        return tagMapper.tagToTagDto(tag);
+    }
+
+    @Override
+    public TagDto getTagByName(String name) {
+        Tag tag = tagRepository.getTagByName(name).orElseThrow(()->buildNotFoundException(null,name));
         return tagMapper.tagToTagDto(tag);
     }
 
     @Override
     public TagDto updateTag(TagDto tagDto, Long id) {
-        Tag oldTag = tagRepository.findById(id).orElseThrow();
+        Tag oldTag = tagRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null));
         tagMapper.updateTag(tagDto,oldTag);
         tagRepository.save(oldTag);
         return tagMapper.tagToTagDto(oldTag);
@@ -39,7 +46,23 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public void deleteTag(Long id) {
-        tagRepository.findById(id).orElseThrow();
+        tagRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null));
         tagRepository.deleteById(id);
+    }
+    private RuntimeException buildNotFoundException(Long id,String name) {
+        NotFoundException exception = new NotFoundException();
+        exception.setIdNotFound(id);
+        exception.setEmailNotFound(name);
+        if(id!=null){
+            String ms ="The following Id was not found: %d";
+            exception.setMessage(String.format(ms,id));
+            return exception;
+        }
+        if(name!=null) {
+            String ms ="The following Name was not found: %s";
+            exception.setMessage(String.format(ms,name));
+            return exception;
+        }
+        return null;
     }
 }
