@@ -18,6 +18,17 @@ public class PostControllerImpl implements PostController {
     }
 
     @Override
+    public PostDto getPostByTitle(String title) {
+        return postService.getPostByTitle(title);
+    }
+
+    @Override
+    public PostDto getPostBySubtitle(String subtitle) {
+        return postService.getPostBySubtitle(subtitle);
+    }
+
+
+    @Override
     public PostDto createPost(PostDto postDto) {
         return postService.createPost(postDto);
     }

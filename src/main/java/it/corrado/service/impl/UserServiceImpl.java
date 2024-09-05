@@ -10,6 +10,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -20,10 +23,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto createUser(UserDto userDto) {
         User user = userMapper.userDtoToUser(userDto);
-        userRepository.save(user);
-        return userMapper.userToUserDto(user);
+        Optional<User> userOpt = userRepository.getUserByEmail(user.getEmail());
+        if(userOpt.isPresent()){
+            throw new NotFoundException(null,null,user.getEmail(),"This email already exists");
+        }else{
+            userRepository.save(user);
+            return userMapper.userToUserDto(user);
+        }
     }
-
     @Override
     public UserDto getUserById(Long id) {
         User user = userRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
@@ -36,6 +43,12 @@ public class UserServiceImpl implements UserService {
         userMapper.updateUser(userDto,oldUser);
         userRepository.save(oldUser);
         return userMapper.userToUserDto(oldUser);
+    }
+
+    @Override
+    public List<UserDto> getAllUsers() {
+        List<User> usersList = userRepository.findAll();
+        return userMapper.listDtoToList(usersList);
     }
 
     @Override

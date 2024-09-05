@@ -1,6 +1,7 @@
 package it.corrado.service.impl;
 
 import it.corrado.dto.PostDto;
+import it.corrado.exception.NotFoundException;
 import it.corrado.mapper.PostMapper;
 import it.corrado.model.Post;
 import it.corrado.repository.PostRepository;
@@ -27,13 +28,25 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto getPostById(Long id) {
-        Post post = postRepository.findById(id).orElseThrow();
+        Post post = postRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
+        return postMapper.postToPostDto(post);
+    }
+
+    @Override
+    public PostDto getPostByTitle(String title) {
+        Post post = postRepository.getPostByTitle(title).orElseThrow(()->buildNotFoundException(null,title,null));
+        return postMapper.postToPostDto(post);
+    }
+
+    @Override
+    public PostDto getPostBySubtitle(String subtitle) {
+        Post post = postRepository.getPostBySubtitle(subtitle).orElseThrow(()->buildNotFoundException(null,null,subtitle));
         return postMapper.postToPostDto(post);
     }
 
     @Override
     public PostDto updatePost(PostDto postDto, Long id) {
-        Post oldPost = postRepository.findById(id).orElseThrow();
+        Post oldPost = postRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
         postMapper.updatePost(postDto, oldPost);
         postRepository.save(oldPost);
         return postMapper.postToPostDto(oldPost);
@@ -41,7 +54,29 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePost(Long id) {
-        postRepository.findById(id).orElseThrow();
+        postRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
         postRepository.deleteById(id);
+    }
+    private RuntimeException buildNotFoundException(Long id,String title,String subtitle) {
+        NotFoundException exception = new NotFoundException();
+        exception.setIdNotFound(id);
+        exception.setEmailNotFound(title);
+        exception.setNicknameNotFound(subtitle);
+        if(id!=null){
+            String ms ="The following Id was not found: %d";
+            exception.setMessage(String.format(ms,id));
+            return exception;
+        }
+        if(title!=null) {
+            String ms ="The following Title was not found: %s";
+            exception.setMessage(String.format(ms,title));
+            return exception;
+        }
+        if(subtitle!=null) {
+            String ms ="The following Subtitle was not found: %s";
+            exception.setMessage(String.format(ms,subtitle));
+            return exception;
+        }
+        return null;
     }
 }

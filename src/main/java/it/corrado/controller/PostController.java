@@ -9,6 +9,12 @@ public interface PostController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     PostDto getPostById(@PathVariable(name="id")Long id);
+    @GetMapping("/title/{title}")
+    @ResponseStatus(HttpStatus.OK)
+    PostDto getPostByTitle(@PathVariable(name="title")String title);
+    @GetMapping("/subtitle/{subtitle}")
+    @ResponseStatus(HttpStatus.OK)
+    PostDto getPostBySubtitle(@PathVariable(name="subtitle")String subtitle);
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     PostDto createPost(@RequestBody PostDto postDto);

@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunte api geUserByNickname e getUserByEmail">
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunta getTagByName">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/UsersControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/TagControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/TagControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/repository/TagRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -154,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725562707195</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Aggiunta getTagByName">
+      <option name="closed" value="true" />
+      <created>1725563450379</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725563450379</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +192,7 @@
     <MESSAGE value="Aggiunti service e controller per User" />
     <MESSAGE value="Aggiunti service e controller per Post" />
     <MESSAGE value="Aggiunte api geUserByNickname e getUserByEmail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte api geUserByNickname e getUserByEmail" />
+    <MESSAGE value="Aggiunta getTagByName" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta getTagByName" />
   </component>
 </project>
