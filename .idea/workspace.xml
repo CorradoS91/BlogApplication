@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunto il controller per Tag Service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/UserControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" afterDir="false" />
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunti service e controller per User">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725501837187</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Aggiunti service e controller per User">
+      <option name="closed" value="true" />
+      <created>1725530424070</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725530424070</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,6 +147,7 @@
     <MESSAGE value="Aggiunti i repository" />
     <MESSAGE value="Aggiunto Tag Service" />
     <MESSAGE value="Aggiunto il controller per Tag Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto il controller per Tag Service" />
+    <MESSAGE value="Aggiunti service e controller per User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti service e controller per User" />
   </component>
 </project>
