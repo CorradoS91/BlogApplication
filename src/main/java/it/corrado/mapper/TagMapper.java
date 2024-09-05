@@ -10,5 +10,5 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 public interface TagMapper {
     TagDto tagToTagDto (Tag tag);
     Tag tagDtoToTag(TagDto tagDto);
-    void updateTag(@MappingTarget Tag oldTag,Tag updatedTag);
+    void updateTag(TagDto tagDto, @MappingTarget Tag tag);
 }

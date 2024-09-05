@@ -38,6 +38,6 @@ public class User {
     @NotBlank
     @Column(name="EMAIL")
     private String email;
-    @OneToMany(mappedBy = "User")
+    @OneToMany(mappedBy = "user")
     private List<Post> postList;
 }

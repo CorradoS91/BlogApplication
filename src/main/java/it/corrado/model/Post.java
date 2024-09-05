@@ -43,6 +43,6 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="FK_USER_ID")
     private User user;
-    @ManyToMany(mappedBy = "POST")
+    @ManyToMany(mappedBy = "post")
     private Set<Tag> tagSet;
 }
