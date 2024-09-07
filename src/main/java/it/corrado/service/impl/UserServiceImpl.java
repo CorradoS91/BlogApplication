@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.userDtoToUser(userDto);
         Optional<User> userOpt = userRepository.getUserByEmail(user.getEmail());
         if(userOpt.isPresent()){
-            throw new NotFoundException(null,null,user.getEmail(),"This email already exists");
+            throw new NotFoundException(null,null,user.getEmail(),"This email already exists: "+user.getEmail());
         }else{
             userRepository.save(user);
             return userMapper.userToUserDto(user);
@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserById(Long id) {
         User user = userRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
+        UserDto userDto = userMapper.userToUserDto(user);
         return userMapper.userToUserDto(user);
     }
 
@@ -48,7 +49,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getAllUsers() {
         List<User> usersList = userRepository.findAll();
-        return userMapper.listDtoToList(usersList);
+        return userMapper.listUserDtoToList(usersList);
     }
 
     @Override

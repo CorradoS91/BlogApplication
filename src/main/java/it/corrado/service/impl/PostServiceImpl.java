@@ -4,13 +4,17 @@ import it.corrado.dto.PostDto;
 import it.corrado.exception.NotFoundException;
 import it.corrado.mapper.PostMapper;
 import it.corrado.model.Post;
+import it.corrado.model.Tag;
+import it.corrado.model.User;
 import it.corrado.repository.PostRepository;
+import it.corrado.repository.UserRepository;
 import it.corrado.service.PostService;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -19,17 +23,27 @@ public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
     @Autowired
     private final PostMapper postMapper;
+    @Autowired
+    private final UserRepository userRepository;
+
     @Override
-    public PostDto createPost(PostDto postDto) {
+    @Transactional
+    public PostDto createPost(Long userId,PostDto postDto) {
+        User user = userRepository.findById(userId).orElseThrow(()->buildNotFoundException(userId,null,null));
         Post post = postMapper.postDtoToPost(postDto);
+        post.setUser(user);
         postRepository.save(post);
-        return postMapper.postToPostDto(post);
+        PostDto resultDto = postMapper.postToPostDto(post);
+        resultDto.setFkUserID(userId);
+        return resultDto;
     }
 
     @Override
     public PostDto getPostById(Long id) {
         Post post = postRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
-        return postMapper.postToPostDto(post);
+        PostDto resultDto = postMapper.postToPostDto(post);
+        resultDto.setFkUserID(id);
+        return resultDto;
     }
 
     @Override
@@ -50,6 +64,12 @@ public class PostServiceImpl implements PostService {
         postMapper.updatePost(postDto, oldPost);
         postRepository.save(oldPost);
         return postMapper.postToPostDto(oldPost);
+    }
+
+    @Override
+    public List<PostDto> getAllPosts() {
+        List<Post> tagList = postRepository.findAll();
+        return postMapper.listPostDtoToList(tagList);
     }
 
     @Override

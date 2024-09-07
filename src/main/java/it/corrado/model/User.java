@@ -7,8 +7,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -38,6 +36,5 @@ public class User {
     @NotBlank
     @Column(name="EMAIL")
     private String email;
-    @OneToMany(mappedBy = "user")
-    private List<Post> postList;
+
 }

@@ -3,8 +3,6 @@ package it.corrado.advice;
 import it.corrado.error.BlogApiError;
 import it.corrado.exception.NotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

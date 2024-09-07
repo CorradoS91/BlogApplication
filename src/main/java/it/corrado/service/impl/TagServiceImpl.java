@@ -10,6 +10,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class TagServiceImpl implements TagService {
@@ -42,6 +44,12 @@ public class TagServiceImpl implements TagService {
         tagMapper.updateTag(tagDto,oldTag);
         tagRepository.save(oldTag);
         return tagMapper.tagToTagDto(oldTag);
+    }
+
+    @Override
+    public List<TagDto> getAllTags() {
+        List<Tag> tagList = tagRepository.findAll();
+        return tagMapper.listTagDtoToList(tagList);
     }
 
     @Override

@@ -4,24 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunta getTagByName">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/UsersControllerImpl.java" afterDir="false" />
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="aggiunti metodi getAll e l'exception per email già presente">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostsControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/TagsControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/advice/BlogControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/advice/BlogControllerAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/impl/PostControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/TagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/TagMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/TagService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/TagServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,7 +66,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
 }</component>
   <component name="RunAnythingCache">
@@ -167,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725563450379</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="aggiunti metodi getAll e l'exception per email già presente">
+      <option name="closed" value="true" />
+      <created>1725566296019</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725566296019</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +214,7 @@
     <MESSAGE value="Aggiunti service e controller per Post" />
     <MESSAGE value="Aggiunte api geUserByNickname e getUserByEmail" />
     <MESSAGE value="Aggiunta getTagByName" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta getTagByName" />
+    <MESSAGE value="aggiunti metodi getAll e l'exception per email già presente" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunti metodi getAll e l'exception per email già presente" />
   </component>
 </project>

@@ -29,8 +29,8 @@ public class PostControllerImpl implements PostController {
 
 
     @Override
-    public PostDto createPost(PostDto postDto) {
-        return postService.createPost(postDto);
+    public PostDto createPost(Long userId,PostDto postDto) {
+        return postService.createPost(userId,postDto);
     }
 
     @Override

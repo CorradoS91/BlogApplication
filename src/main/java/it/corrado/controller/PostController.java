@@ -15,9 +15,9 @@ public interface PostController {
     @GetMapping("/subtitle/{subtitle}")
     @ResponseStatus(HttpStatus.OK)
     PostDto getPostBySubtitle(@PathVariable(name="subtitle")String subtitle);
-    @PostMapping
+    @PostMapping("/create/{userId}")
     @ResponseStatus(HttpStatus.CREATED)
-    PostDto createPost(@RequestBody PostDto postDto);
+    PostDto createPost(@PathVariable(name="userId")Long userId, @RequestBody PostDto postDto);
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     PostDto updatePost(@PathVariable(name="id") Long id,@RequestBody PostDto postDto);

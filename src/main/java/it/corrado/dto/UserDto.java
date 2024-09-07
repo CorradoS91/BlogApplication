@@ -1,9 +1,6 @@
 package it.corrado.dto;
 
-import it.corrado.model.Post;
 import lombok.*;
-
-import java.util.List;
 
 @Getter
 @Setter
@@ -16,5 +13,4 @@ public class UserDto {
     private String surname;
     private String nickname;
     private String email;
-    private List<Post> postList;
 }
