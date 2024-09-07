@@ -7,6 +7,7 @@ import it.corrado.model.Post;
 import it.corrado.model.Tag;
 import it.corrado.model.User;
 import it.corrado.repository.PostRepository;
+import it.corrado.repository.TagRepository;
 import it.corrado.repository.UserRepository;
 import it.corrado.service.PostService;
 import jakarta.transaction.Transactional;
@@ -25,6 +26,8 @@ public class PostServiceImpl implements PostService {
     private final PostMapper postMapper;
     @Autowired
     private final UserRepository userRepository;
+    @Autowired
+    private final TagRepository tagRepository;
 
     @Override
     @Transactional
@@ -77,6 +80,18 @@ public class PostServiceImpl implements PostService {
         postRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null,null));
         postRepository.deleteById(id);
     }
+    @Override
+    public PostDto addTagToPost(Long postId, Long tagId) {
+        Post post = postRepository.findById(postId).orElseThrow(()->buildNotFoundException(postId,null,null));
+        Tag tag = tagRepository.findById(tagId).orElseThrow(()->buildNotFoundException(tagId,null,null));
+        post.getTagSet().add(tag);
+        postRepository.save(post);
+        PostDto tempDto = postMapper.postToPostDto(post);
+        tempDto.getTagIds().add(tagId);
+        return tempDto;
+    }
+
+
     private RuntimeException buildNotFoundException(Long id,String title,String subtitle) {
         NotFoundException exception = new NotFoundException();
         exception.setIdNotFound(id);

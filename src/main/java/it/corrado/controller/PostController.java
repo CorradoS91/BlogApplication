@@ -24,4 +24,8 @@ public interface PostController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deletePost(@PathVariable(name="id")Long id);
+    @PostMapping("/{postId}/tags/{tagId}")
+    @ResponseStatus(HttpStatus.CREATED)
+    PostDto addTagToPost(@PathVariable(name="postId") Long postId, @PathVariable(name="tagId") Long tagId);
+
 }

@@ -42,4 +42,11 @@ public class PostControllerImpl implements PostController {
     public void deletePost(Long id) {
         postService.deletePost(id);
     }
+
+    @Override
+    public PostDto addTagToPost(Long postId, Long tagId) {
+        return postService.addTagToPost(postId,tagId);
+    }
+
+
 }

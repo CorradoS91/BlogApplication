@@ -11,5 +11,6 @@ public interface PostService {
     PostDto getPostBySubtitle(String subtitle);
     PostDto updatePost(PostDto postDto, Long id);
     List<PostDto> getAllPosts();
+    PostDto addTagToPost(Long postId, Long tagId);
     void deletePost(Long id);
 }
