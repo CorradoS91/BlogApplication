@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunto addTagToPost">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunto addTagToPost funzionante">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/model/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725754702772</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Aggiunto addTagToPost funzionante">
+      <option name="closed" value="true" />
+      <created>1725795942359</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725795942359</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +244,7 @@
     <MESSAGE value="aggiunti metodi getAll e l'exception per email già presente" />
     <MESSAGE value="aggiunti metodi getAll anche per Posts e Tags" />
     <MESSAGE value="Aggiunto addTagToPost" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto addTagToPost" />
+    <MESSAGE value="Aggiunto addTagToPost funzionante" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto addTagToPost funzionante" />
   </component>
 </project>

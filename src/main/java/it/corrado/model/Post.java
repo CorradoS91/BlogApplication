@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -47,5 +48,5 @@ public class Post {
     @JoinColumn(name="FK_USER_ID")
     private User user;
     @ManyToMany(mappedBy = "post")
-    private Set<Tag> tagSet;
+    private Set<Tag> tagSet = new HashSet<>();
 }
