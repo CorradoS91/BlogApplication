@@ -3,6 +3,7 @@ package it.corrado.dto;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -18,5 +19,5 @@ public class PostDto {
     private LocalDate createdAt;
     private LocalDate updatedAt;
     private Long fkUserID;
-    private Set<Long> tagIds;
+    private Set<Long> tagIds = new HashSet<>();
 }

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d612af04-040c-4f17-bb0a-6e88dce68c23" name="Changes" comment="Aggiunto addTagToPost">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/TagsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/dto/TagDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/corrado/service/impl/PostServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,7 @@
 }</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="clean install" />
       <command value="mvn clean install" />
     </option>
   </component>
@@ -189,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725751026288</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Aggiunto addTagToPost">
+      <option name="closed" value="true" />
+      <created>1725754390550</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725754390550</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Aggiunto addTagToPost">
+      <option name="closed" value="true" />
+      <created>1725754702772</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725754702772</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

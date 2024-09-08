@@ -85,8 +85,10 @@ public class PostServiceImpl implements PostService {
         Post post = postRepository.findById(postId).orElseThrow(()->buildNotFoundException(postId,null,null));
         Tag tag = tagRepository.findById(tagId).orElseThrow(()->buildNotFoundException(tagId,null,null));
         post.getTagSet().add(tag);
+        User userPost = post.getUser();
         postRepository.save(post);
         PostDto tempDto = postMapper.postToPostDto(post);
+        tempDto.setFkUserID(userPost.getId());
         tempDto.getTagIds().add(tagId);
         return tempDto;
     }
