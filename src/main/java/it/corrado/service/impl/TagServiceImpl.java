@@ -4,13 +4,16 @@ import it.corrado.dto.TagDto;
 import it.corrado.exception.NotFoundException;
 import it.corrado.mapper.TagMapper;
 import it.corrado.model.Tag;
+import it.corrado.repository.PostRepository;
 import it.corrado.repository.TagRepository;
 import it.corrado.service.TagService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -19,6 +22,8 @@ public class TagServiceImpl implements TagService {
     private final TagRepository tagRepository;
     @Autowired
     private final TagMapper tagMapper;
+    @Autowired
+    private final PostRepository postRepository;
     @Override
     public TagDto createTag(TagDto tagDto) {
         Tag tag = tagMapper.tagDtoToTag(tagDto);
@@ -29,7 +34,10 @@ public class TagServiceImpl implements TagService {
     @Override
     public TagDto getTagById(Long id) {
         Tag tag = tagRepository.findById(id).orElseThrow(()->buildNotFoundException(id,null));
-        return tagMapper.tagToTagDto(tag);
+        Set<Long> postIds = new HashSet<>(postRepository.findPostIdsByTagId(id));
+        TagDto tagDto= tagMapper.tagToTagDto(tag);
+        tagDto.setPostIds(postIds);
+        return tagDto;
     }
 
     @Override
